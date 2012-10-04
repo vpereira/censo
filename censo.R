@@ -3,5 +3,5 @@ sp_censo2010 <- read.csv("sp_censo2010.csv", header=T, skip=2, dec=",",fileEncod
 mulheres = subset(sp_censo2010,str_detect(sp_censo2010$Unidade,"mulheres"))
 homens = subset(sp_censo2010,str_detect(sp_censo2010$Unidade,"homens"))
 
-as.numeric(homens$Valor)
-as.numeric(mulheres$Valor)
+as.numeric(as.character(homens$Valor))
+as.numeric(as.character(mulheres$Valor))
